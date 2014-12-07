@@ -1,0 +1,155 @@
+
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+  height: 100%;
+  background: rgb(15, 85, 134);
+  
+}
+
+body {
+  width:100%;
+  height:auto;
+  font-family: montserrat, arial, verdana;
+}
+
+/*form styles*/
+
+#msform {
+  width: 800px;
+  margin: 50px auto;
+  position: relative;
+}
+
+/*form header*/
+#form_header{
+  height:100px;
+  margin:0 10%;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+#form_header img{
+  width: 100px;
+  float: left;
+}
+
+/*progressbar*/
+#progressbar {
+  margin: 30px 0;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+/*form fieldset*/
+
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  
+  /*stacking fieldsets above each other*/
+  position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/* form inputs*/
+#msform input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 20px 6px 0 20px;
+  width: 50%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+  width: 130px;
+  background: #9f844d;
+  font-weight: normal;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #9f844d;
+}
+/*radio buttons*/
+input[type="radio"]{
+  display: none;
+}
+
+input[type="radio"] + label:before{
+  background-color: #9f844d;
+  border: 2px solid black;
+  border-radius: 10px;
+  content: "";
+  display: inline-block;
+  font-size: 24px;
+  height: 12px;
+  width: 12px;
+  line-height: 13px;
+  margin: -2px 6px 0 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+input[type="radio"]:checked + label:before{
+  content:"x";
+  color: black;
+}
+.errors{
+    height:50px;
+    color: red;
+}
+
+/*headings*/
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 30px;
+
+}
+label{
+  color: #2C3E50;
+  font-size: 15px;
+  line-height: 25px;
+  
+}
+
+#team_reg{
+    margin-top: 20px;
+    margin-left: 20px;
+}
